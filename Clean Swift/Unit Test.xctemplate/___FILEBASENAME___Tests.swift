@@ -25,7 +25,7 @@ class ___VARIABLE_sceneName___Tests: XCTestCase {
     // MARK: Test doubles
     
     // MARK: Tests
-    func testDoSomething() {
+    func test_DoSomething() {
         // Given
         
         // When

@@ -39,7 +39,7 @@ class ___VARIABLE_sceneName___InteractorTests: XCTestCase {
     }
     
     // MARK: Tests
-    func testDoSomething() {
+    func test_DoSomething() {
         // Given
         let spy = ___VARIABLE_sceneName___PresentationLogicSpy()
         sut.presenter = spy

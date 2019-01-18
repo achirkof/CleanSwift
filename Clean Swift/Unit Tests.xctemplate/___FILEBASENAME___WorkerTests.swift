@@ -31,7 +31,7 @@ class ___VARIABLE_sceneName___WorkerTests: XCTestCase {
     // MARK: Test doubles
     
     // MARK: Tests
-    func testSomething() {
+    func test_Something() {
         // Given
         
         // When

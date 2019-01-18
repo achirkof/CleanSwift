@@ -49,7 +49,7 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
     }
     
     // MARK: Tests
-    func testShouldDoSomethingWhenViewIsLoaded() {
+    func test_ShouldDoSomethingWhenViewIsLoaded() {
         // Given
         let spy = ___VARIABLE_sceneName___BusinessLogicSpy()
         sut.interactor = spy
@@ -61,7 +61,7 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
         XCTAssertTrue(spy.doSomethingCalled, "viewDidLoad() should ask the interactor to do something")
     }
     
-    func testDisplaySomething() {
+    func test_DisplaySomething() {
         // Given
         let viewModel = ___VARIABLE_sceneName___.Something.ViewModel()
         
