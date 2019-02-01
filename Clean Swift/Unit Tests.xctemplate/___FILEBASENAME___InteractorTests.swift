@@ -28,16 +28,6 @@ class ___VARIABLE_sceneName___InteractorTests: XCTestCase {
         sut = ___VARIABLE_sceneName___Interactor()
     }
     
-    // MARK: Test doubles
-    class ___VARIABLE_sceneName___PresentationLogicSpy: ___VARIABLE_sceneName___PresentationLogic {
-        var presentSomethingCalled = false
-        
-        func presentSomething(response: ___VARIABLE_sceneName___.Something.Response)
-        {
-            presentSomethingCalled = true
-        }
-    }
-    
     // MARK: Tests
     func test_DoSomething() {
         // Given
@@ -50,5 +40,15 @@ class ___VARIABLE_sceneName___InteractorTests: XCTestCase {
         
         // Then
         XCTAssertTrue(spy.presentSomethingCalled, "doSomething(request:) should ask the presenter to format the result")
+    }
+}
+
+// MARK: Test doubles
+class ___VARIABLE_sceneName___PresentationLogicSpy: ___VARIABLE_sceneName___PresentationLogic {
+    var presentSomethingCalled = false
+    
+    func presentSomething(response: ___VARIABLE_sceneName___.Something.Response)
+    {
+        presentSomethingCalled = true
     }
 }

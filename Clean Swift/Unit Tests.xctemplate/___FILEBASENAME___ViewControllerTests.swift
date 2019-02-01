@@ -38,16 +38,6 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
         RunLoop.current.run(until: Date())
     }
     
-    // MARK: Test doubles
-    class ___VARIABLE_sceneName___BusinessLogicSpy: ___VARIABLE_sceneName___BusinessLogic {
-        var doSomethingCalled = false
-        
-        func doSomething(request: ___VARIABLE_sceneName___.Something.Request)
-        {
-            doSomethingCalled = true
-        }
-    }
-    
     // MARK: Tests
     func test_ShouldDoSomethingWhenViewIsLoaded() {
         // Given
@@ -71,5 +61,15 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
         
         // Then
         //XCTAssertEqual(sut.nameTextField.text, "", "displaySomething(viewModel:) should update the name text field")
+    }
+}
+
+// MARK: Test doubles
+class ___VARIABLE_sceneName___BusinessLogicSpy: ___VARIABLE_sceneName___BusinessLogic {
+    var doSomethingCalled = false
+    
+    func doSomething(request: ___VARIABLE_sceneName___.Something.Request)
+    {
+        doSomethingCalled = true
     }
 }

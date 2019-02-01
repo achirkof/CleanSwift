@@ -28,16 +28,6 @@ class ___VARIABLE_sceneName___PresenterTests: XCTestCase {
         sut = ___VARIABLE_sceneName___Presenter()
     }
     
-    // MARK: Test doubles
-    class ___VARIABLE_sceneName___DisplayLogicSpy: ___VARIABLE_sceneName___DisplayLogic {
-        var displaySomethingCalled = false
-        
-        func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
-        {
-            displaySomethingCalled = true
-        }
-    }
-    
     // MARK: Tests
     func test_PresentSomething() {
         // Given
@@ -50,5 +40,15 @@ class ___VARIABLE_sceneName___PresenterTests: XCTestCase {
         
         // Then
         XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
+    }
+}
+
+// MARK: Test doubles
+class ___VARIABLE_sceneName___DisplayLogicSpy: ___VARIABLE_sceneName___DisplayLogic {
+    var displaySomethingCalled = false
+    
+    func displaySomething(viewModel: ___VARIABLE_sceneName___.Something.ViewModel)
+    {
+        displaySomethingCalled = true
     }
 }

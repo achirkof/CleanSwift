@@ -22,8 +22,6 @@ class ___VARIABLE_sceneName___Tests: XCTestCase {
         super.tearDown()
     }
     
-    // MARK: Test doubles
-    
     // MARK: Tests
     func test_DoSomething() {
         // Given
@@ -33,3 +31,8 @@ class ___VARIABLE_sceneName___Tests: XCTestCase {
         // Then
     }
 }
+
+// MARK: Test doubles
+
+
+// MARK: Helpers

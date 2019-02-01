@@ -28,8 +28,6 @@ class ___VARIABLE_sceneName___WorkerTests: XCTestCase {
         sut = ___VARIABLE_sceneName___Worker()
     }
     
-    // MARK: Test doubles
-    
     // MARK: Tests
     func test_Something() {
         // Given
@@ -39,3 +37,8 @@ class ___VARIABLE_sceneName___WorkerTests: XCTestCase {
         // Then
     }
 }
+
+// MARK: Test doubles
+
+
+// MARK: Helpers
