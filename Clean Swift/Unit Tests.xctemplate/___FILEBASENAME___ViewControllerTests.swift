@@ -26,23 +26,11 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    // MARK: Test setup
-    func setup___VARIABLE_sceneName___ViewController() {
-        let bundle = Bundle.main
-        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        sut = storyboard.instantiateViewController(withIdentifier: "___VARIABLE_sceneName___ViewController") as! ___VARIABLE_sceneName___ViewController
-    }
-    
-    func loadView() {
-        window.addSubview(sut.view)
-        RunLoop.current.run(until: Date())
-    }
-    
     // MARK: Tests
-    func test_ShouldDoSomethingWhenViewIsLoaded() {
+    func test_ShouldDoSomething_WhenViewIsLoaded() {
         // Given
-        let spy = ___VARIABLE_sceneName___BusinessLogicSpy()
-        sut.interactor = spy
+        let interactorSpy = ___VARIABLE_sceneName___InteractorSpy()
+        sut.interactor = interactorSpy
         
         // When
         loadView()
@@ -51,7 +39,7 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
         XCTAssertTrue(spy.doSomethingCalled, "viewDidLoad() should ask the interactor to do something")
     }
     
-    func test_DisplaySomething() {
+    func test_ShouldDisplaySomething_WhenGetSomething() {
         // Given
         let viewModel = ___VARIABLE_sceneName___.Something.ViewModel()
         
@@ -62,10 +50,22 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
         // Then
         //XCTAssertEqual(sut.nameTextField.text, "", "displaySomething(viewModel:) should update the name text field")
     }
+    
+    // MARK: Helpers
+    func setup___VARIABLE_sceneName___ViewController() {
+        let bundle = Bundle.main
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        sut = storyboard.instantiateViewController(withIdentifier: "___VARIABLE_sceneName___ViewController") as! ___VARIABLE_sceneName___ViewController
+    }
+    
+    func loadView() {
+        window.addSubview(sut.view)
+        RunLoop.current.run(until: Date())
+    }
 }
 
 // MARK: Test doubles
-class ___VARIABLE_sceneName___BusinessLogicSpy: ___VARIABLE_sceneName___BusinessLogic {
+class ___VARIABLE_sceneName___InteractorSpy: ___VARIABLE_sceneName___BusinessLogic {
     var doSomethingCalled = false
     
     func doSomething(request: ___VARIABLE_sceneName___.Something.Request)
