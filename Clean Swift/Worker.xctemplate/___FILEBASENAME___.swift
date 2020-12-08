@@ -9,7 +9,5 @@
 import UIKit
 
 class ___VARIABLE_sceneName___ {
-    func doSomeWork() {
-        
-    }
+    func doSomeWork() {}
 }
