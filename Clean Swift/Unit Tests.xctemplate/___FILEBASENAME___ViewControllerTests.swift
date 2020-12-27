@@ -32,8 +32,8 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
 
     func test_ShouldDoSomething_WhenViewIsLoaded() {
         // Given
-        let interactorSpy = ___VARIABLE_sceneName___InteractorSpy()
-        sut.interactor = interactorSpy
+        let spy = ___VARIABLE_sceneName___InteractorSpy()
+        sut.interactor = spy
 
         // When
         loadView()
