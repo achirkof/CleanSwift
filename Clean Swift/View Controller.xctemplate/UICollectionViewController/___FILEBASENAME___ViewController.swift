@@ -14,7 +14,7 @@ protocol ___VARIABLE_sceneName___DisplayLogic: AnyObject {
 
 class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VARIABLE_sceneName___DisplayLogic {
     var interactor: ___VARIABLE_sceneName___BusinessLogic?
-    var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
+    var router: ___VARIABLE_sceneName___RoutingLogic?
 
     // MARK: Object lifecycle
 
@@ -61,14 +61,16 @@ class ___VARIABLE_sceneName___ViewController: UICollectionViewController, ___VAR
         doSomething()
     }
 
-    // MARK: Do something
+    // MARK: Display Logic
+
+    func displaySomething(viewModel _: ___VARIABLE_sceneName___.Something.ViewModel) {
+        // nameTextField.text = viewModel.name
+    }
+
+    // MARK: Private
 
     func doSomething() {
         let request = ___VARIABLE_sceneName___.Something.Request()
         interactor?.doSomething(request: request)
-    }
-
-    func displaySomething(viewModel _: ___VARIABLE_sceneName___.Something.ViewModel) {
-        // nameTextField.text = viewModel.name
     }
 }

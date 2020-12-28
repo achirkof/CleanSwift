@@ -8,6 +8,10 @@
 
 import UIKit
 
-class ___VARIABLE_sceneName___Worker {
+protocol ___VARIABLE_sceneName___WorkerLogic {
+    func doSomeWork()
+}
+
+class ___VARIABLE_sceneName___Worker: ___VARIABLE_sceneName___WorkerLogic {
     func doSomeWork() {}
 }
